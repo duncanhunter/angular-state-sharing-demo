@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'pal-notifications-table',
   templateUrl: './notifications-table.component.html',
   styleUrls: ['./notifications-table.component.less']
 })
-export class NotificationsTableComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+export class NotificationsTableComponent {
+  @Input() user: any;
+  @Output() onChangeSomething = new EventEmitter<string>();
 
 }

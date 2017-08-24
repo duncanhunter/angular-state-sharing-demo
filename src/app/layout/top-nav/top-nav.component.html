@@ -1,3 +1,5 @@
 <p>
   top-nav works!
+  {{user$ | async | json}}
+  <button (click)="authService.setUser()">login</button>
 </p>

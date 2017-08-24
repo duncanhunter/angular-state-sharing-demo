@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TopNavComponent } from './layout/top-nav/top-nav.component';
 import { SideNavComponent } from './layout/side-nav/side-nav.component';
 import { PathNotFoundComponent } from './path-not-found/path-not-found.component';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { PathNotFoundComponent } from './path-not-found/path-not-found.component
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
